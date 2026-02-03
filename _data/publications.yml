@@ -11,7 +11,7 @@ main:
     #image: ./assets/img/teaser_example_2.png
     notes: Late breaking results track (Poster)
   
-  - title: hopwise A Python Library for Explainable Recommenda- tion based on Path Reasoning over Knowledge Graphs
+  - title: hopwise A Python Library for Explainable Recommendation based on Path Reasoning over Knowledge Graphs
     authors: Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>
     conference_short: ACM CIKM '25
     conference: 34th ACM Conference on Information and Knowledge Management <strong>(ACM CIKM '25)</strong>, Seoul, South Korea, 2025.
