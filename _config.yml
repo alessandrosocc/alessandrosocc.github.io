@@ -1,13 +1,13 @@
 # Basic Information 
 title: Alessandro Soccol
-position: Research Assistant & MSc Student
+position: Research Fellow & MSc Student in Artificial Intelligence
 affiliation: University of Cagliari
 email: alessandrosoccol@gmail.com
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: Recommender Systems, Information Retrieval, Deep Learning, Machine Learning, Data Science, Artificial Intelligence, Computer Science, University of Cagliari 
-description: Alessandro Soccol, MSc Student at University of Cagliari. Research interests include Recommender Systems, Information Retrieval, Deep Learning, Machine Learning, Data Science, and Artificial Intelligence.
+description: Alessandro Soccol, MSc Student at University of Cagliari. Information Retrieval, Natural Language Processing.
 canonical: https://alessandrosocc.github.io
 
 # Links 
@@ -21,8 +21,8 @@ twitter: https://x.com/alessandrosocc2
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
 avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+favicon: ./assets/img/avatar.png
+favicon_dark: ./assets/img/avatar.png
 
 # Footnote
 # You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
