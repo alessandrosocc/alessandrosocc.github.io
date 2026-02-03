@@ -1,13 +1,13 @@
 # Basic Information 
 title: Alessandro Soccol
-position: MSc Student
+position: Research fellow & MSc student in Artificial Intelligence
 affiliation: University of Cagliari
 email: alessandrosoccol@gmail.com
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: Recommender Systems, Information Retrieval, Deep Learning, Machine Learning, Data Science, Artificial Intelligence, Computer Science, University of Cagliari 
-description: description
+description: Alessandro Soccol, MSc Student at University of Cagliari. Research interests include Recommender Systems, Information Retrieval, Deep Learning, Machine Learning, Data Science, and Artificial Intelligence.
 canonical: https://minimal-light-theme.yliu.me/
 
 # Links 
@@ -34,7 +34,7 @@ auto_dark_mode: true
 
 # Font
 # You can use this option to choose between Serif or Sans Serif fonts.
-font: "Sans Serif" # or "Sans Serif"
+font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
@@ -49,9 +49,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
