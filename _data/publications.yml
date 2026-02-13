@@ -40,7 +40,7 @@ main:
     #image: ./assets/img/teaser_example_2.png
     notes: Short Paper (Oral)
 
-  - title: Explainable Recommendations through Path Reasoning over Knowledge Graph with hopwise
+  - title: How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs: A Tutorial with hopwise
     authors: Ludovico Boratto, Gianni Fenu, Francesca M. Mallocci, Mirko Marras,   Giacomo Medda, and <strong>Alessandro Soccol</strong>
     conference_short: ACM UMAP '26
     conference:  34th ACM International Conference on User Modeling, Adaptation and Personalization <strong>(UMAP '26)</strong>, Gothenburg, Sweden, 2026.
