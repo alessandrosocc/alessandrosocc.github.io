@@ -209,6 +209,8 @@ papertitle {
     .image.avatar {
       border-radius: 12px;
       overflow: hidden;
+      display: inline-block;
+      margin-bottom: 10px;
     }
 
       .image.avatar:before {
@@ -227,7 +229,7 @@ papertitle {
 
     #header .image.avatar {
       margin: 0 0 1em 0;
-      width: 8.00em;
+      width: 6.80em;
     }
 
 h3, h4, h5, h6 {
@@ -500,6 +502,11 @@ footer {
   }
 
 
+   .image.avatar {
+        width: 6.20em;
+        margin-bottom: 10px;
+      }
+
    .image.avatar img {
         border-radius: 12px;
         width: 100%;
@@ -557,12 +564,17 @@ footer {
     width:33%;
   }
 
-  .image.avatar img {
+    .image.avatar {
+      width: 5.50em;
+      margin-bottom: 10px;
+    }
+
+    .image.avatar img {
       border-radius: 12px;
       width: 100%;
       height: auto;
       display: block;
-  }
+    }
   #head1o2 {
     visibility: hidden;
   }
