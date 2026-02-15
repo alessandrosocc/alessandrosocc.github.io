@@ -210,7 +210,8 @@ papertitle {
       border-radius: 12px;
       overflow: hidden;
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      width: 7.0em;
     }
 
       .image.avatar:before {
@@ -504,7 +505,7 @@ footer {
 
    .image.avatar {
         width: 6.20em;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
 
    .image.avatar img {
@@ -564,10 +565,10 @@ footer {
     width:33%;
   }
 
-    .image.avatar {
-      width: 5.50em;
-      margin-bottom: 10px;
-    }
+      .image.avatar {
+        width: 5.20em;
+        margin-bottom: 12px;
+      }
 
     .image.avatar img {
       border-radius: 12px;
