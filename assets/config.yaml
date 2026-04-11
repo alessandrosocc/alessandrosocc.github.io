@@ -1,0 +1,131 @@
+site:
+  title: "Alessandro Soccol"
+  meta_description: "Research Fellow and MSc Student"
+  meta_author: "Alessandro Soccol"
+
+
+# here you specify the labels for the different sections of the website.
+sections:
+  publications: "Publications"
+  conference_tutorials: "Conference Tutorials"
+  program_committee: "Program Committee Membership"
+  experience: "Experience"
+  education: "Education"
+  #news_title: "News"
+
+
+# from here you can specify the content of the different sections. You can use HTML tags in the content, but make sure to escape them properly (e.g., use &lt; instead of <).
+
+# the header section contains the information that will be displayed in the header of the website, including the profile image, name, meta information, and links to CV, email, and social media profiles.
+header:
+  profile_image: "images/profile.png"
+  profile_alt: "Alessandro Soccol"
+  name_html: "Alessandro Soccol"
+  meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">Max Planck Institute for Intelligent Systems (IMPRS-IS), Stuttgart <br> <br></span> Research fellow, MSc Student <br><span class=\"sub-text\">University of Cagliari</span>"
+  body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
+  keywords:
+    - "Recommender Systems"
+    - "Knowledge Graphs"
+    - "Natural Language Processing"
+  links:
+    - label: "CV"
+      href: "pdfs/xxxxxx.pdf"
+      target: "_blank"
+    - label: "Email"
+      href: "mailto:alessandro.soccol@unica.it"
+    # - label: "Google Scholar"
+    #   href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
+    #   target: "_blank"
+    # - label: "Twitter"
+    #   href: "https://twitter.com/xxxxxxxx"
+    #   target: "_blank"
+    - label: "Github"
+      href: "https://github.com/alessandrosocc"
+      target: "_blank"
+    - label: "LinkedIn"
+      href: "https://www.linkedin.com/in/alessandrosoccol/"
+      target: "_blank"
+
+# news:
+#   - date: "Feb 2026"
+#     html: "New website"
+program_committee:
+  items:
+    - text: "ACM Conference on Recommender Systems (RecSys) 2026"
+
+
+publications:
+  scholar_link:
+    label: "See the full list of my publications on Google Scholar →"
+    href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
+  papers:
+    - title: "hopwise A Python Library for Explainable Recommendation based on Path Reasoning over Knowledge Graphs"
+      url: "https://dl.acm.org/doi/10.1145/3746252.3761641"
+      authors: "Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
+      venue: "CIKM 2025"
+      links:
+        - label: "[PDF]"
+          url: "https://dl.acm.org/doi/10.1145/3746252.3761641"
+        - label: "[Code]"
+          url: "https://github.com/tail-unica/hopwise"
+
+        
+    - title: "Effective and Transparent Course Recommendation through Causal Reasoning with Language Models"
+      url: "https://ceur-ws.org/Vol-4026/paper26.pdf"
+      authors: "Afreen Neda, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol</strong>"
+      venue: "IIR 2025"
+      links:
+        - label: "[PDF]"
+          url: "https://ceur-ws.org/Vol-4026/paper26.pdf"
+
+    - title: "Low-Resource Course Recommendation for Professional Training Associations"
+      url: "https://link.springer.com/chapter/10.1007/978-3-032-17604-2_16"
+      authors: "Ludovico Boratto, Gianni Fenu, Marongiu Nicolò, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
+      venue: "WAILS 2025"
+      links:
+        - label: "[PDF]"
+          url: "https://link.springer.com/chapter/10.1007/978-3-032-17604-2_16"
+
+    - title: "KGGLM A Generative Language Model for Generalizable Knowledge Graph Representation Learning in Recommendation"
+      url: "https://dl.acm.org/doi/10.1145/3640457.3691703"
+      authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol*</strong>"
+      venue: "RecSys 2024"
+      links:
+        - label: "[PDF]"
+          url: "https://dl.acm.org/doi/10.1145/3640457.3691703"
+        - label: "[Code]" 
+          url: "https://github.com/mirkomarras/kgglm"
+
+
+conference_tutorials:
+  items:
+    - title: "How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs A Tutorial with hopwise"
+      url: "https://tail-unica.github.io/hopwise/umap2026/"
+      authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol</strong>"
+      venue: "UMAP 2024"
+      links:
+        - label: "[Tutorial page]"
+          url: "https://tail-unica.github.io/hopwise/umap2026/"
+
+experience:
+  - role: "Research Fellow"
+    place: "University of Cagliari"
+    #place_url: "https://xxxxxx"
+    logo: "images/univca.png"
+    logo_alt: "University of Cagliari"
+    date: "08/2024 - Present"
+
+education:
+  - role: "Master's Degree in Applied Artificial Intelligence"
+    place: "University of Cagliari"
+    #place_url: "https://xxx"
+    logo: "images/univca.png"
+    logo_alt: "University of Cagliari"
+    date: "10/2024 - Present"
+
+  - role: "Bachelor's Degree in Applied Computer Science and Data Analytics"
+    place: "University of Cagliari"
+    #place_url: "https://xxxxx"
+    logo: "images/univca.png"
+    logo_alt: "University of Cagliari"
+    date: "10/2021 - 07/2024"
