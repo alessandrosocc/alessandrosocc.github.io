@@ -102,7 +102,7 @@ conference_tutorials:
     - title: "How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs A Tutorial with hopwise"
       url: "https://tail-unica.github.io/hopwise/umap2026/"
       authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol</strong>"
-      venue: "UMAP 2024"
+      venue: "UMAP 2026"
       links:
         - label: "[Tutorial page]"
           url: "https://tail-unica.github.io/hopwise/umap2026/"
