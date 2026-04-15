@@ -54,6 +54,23 @@ site:
   meta_author: "Your Name"
 ```
 
+To control the website font, add a top-level `custom-font` key:
+
+```yaml
+custom-font: ~
+```
+
+Use `custom-font: ~` to keep the default font stack. If you set a font name instead, that font will be applied across the whole website:
+
+```yaml
+custom-font: "PaperMono"
+```
+
+Important:
+
+- this only sets the CSS `font-family` name
+- if you use a custom font, make sure that font is actually loaded by the site, for example with `@font-face` in [`assets/style.css`](/Users/alessandrosoccol/Documents/alessandrosocc.github.io/assets/style.css:1) or through an external font provider
+
 ### 2. Header
 
 Use the `header` block for the top part of the page:
@@ -105,6 +122,7 @@ Important:
 
 - each key under `sections` must match a real top-level section below
 - if a section is listed here but the corresponding content block does not exist, it will not be rendered
+- for supported object-based sections, the website follows the field order you use in `assets/config.yaml`
 
 ## Supported Section Types
 
@@ -112,13 +130,12 @@ The current JavaScript renderer supports the following section names.
 
 ### `publications`
 
+The Publications section respects the order of fields in YAML. For example, if `scholar_link` is placed after `papers`, it will render at the bottom of the section.
+
 Example:
 
 ```yaml
 publications:
-  scholar_link:
-    label: "See full list on Google Scholar"
-    href: "https://scholar.google.com/..."
   papers:
     - title: "Paper title"
       url: "https://example.com"
@@ -127,6 +144,9 @@ publications:
       links:
         - label: "[PDF]"
           url: "https://example.com/pdf"
+  scholar_link:
+    label: "See full list on Google Scholar"
+    href: "https://scholar.google.com/..."
 ```
 
 ### `conference_tutorials`

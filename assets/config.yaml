@@ -3,6 +3,8 @@ site:
   meta_description: "Research Fellow and MSc Student"
   meta_author: "Alessandro Soccol"
 
+custom-font: ~
+
 
 # here you specify the labels for the different sections of the website.
 sections:
@@ -22,7 +24,7 @@ header:
   profile_alt: "Alessandro Soccol"
   name_html: "Alessandro Soccol"
   meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">Max Planck Institute for Intelligent Systems (IMPRS-IS), Stuttgart <br> <br></span> Research fellow, MSc Student <br><span class=\"sub-text\">University of Cagliari</span>"
-  body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
+  #body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
   keywords:
     - "Recommender Systems"
     - "Knowledge Graphs"
@@ -33,8 +35,8 @@ header:
       target: "_blank"
     - label: "Email"
       href: "mailto:alessandro.soccol@unica.it"
-    # - label: "Google Scholar"
-    #   href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
+    - label: "Google Scholar"
+      href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
     #   target: "_blank"
     # - label: "Twitter"
     #   href: "https://twitter.com/xxxxxxxx"
@@ -51,15 +53,12 @@ header:
 #     html: "New website"
 program_committee:
   items:
-    - text: "ACM Conference on Recommender Systems (RecSys) 2026"
+    - text: "ACM Conference on Recommender Systems (RecSys): 2026"
 
 
 publications:
-  scholar_link:
-    label: "See the full list of my publications on Google Scholar →"
-    href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
   papers:
-    - title: "hopwise A Python Library for Explainable Recommendation based on Path Reasoning over Knowledge Graphs"
+    - title: "hopwise: A Python Library for Explainable Recommendation based on Path Reasoning over Knowledge Graphs"
       url: "https://dl.acm.org/doi/10.1145/3746252.3761641"
       authors: "Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
       venue: "CIKM 2025"
@@ -88,7 +87,7 @@ publications:
 
     - title: "KGGLM A Generative Language Model for Generalizable Knowledge Graph Representation Learning in Recommendation"
       url: "https://dl.acm.org/doi/10.1145/3640457.3691703"
-      authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol*</strong>"
+      authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol</strong>"
       venue: "RecSys 2024"
       links:
         - label: "[PDF]"
@@ -96,10 +95,13 @@ publications:
         - label: "[Code]" 
           url: "https://github.com/mirkomarras/kgglm"
 
+  # scholar_link:
+  #   label: "See the full list of my publications on Google Scholar →"
+  #   href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
 
 conference_tutorials:
   items:
-    - title: "How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs A Tutorial with hopwise"
+    - title: "How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs: A Tutorial with hopwise"
       url: "https://tail-unica.github.io/hopwise/umap2026/"
       authors: "Giacomo Balloccu, Ludovico Boratto, Gianni Fenu, Mirko Marras, and <strong>Alessandro Soccol</strong>"
       venue: "UMAP 2026"

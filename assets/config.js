@@ -19,6 +19,68 @@ const clearChildren = (el) => {
   }
 };
 
+const countIndent = (line) => {
+  const match = line.match(/^ */);
+  return match ? match[0].length : 0;
+};
+
+const extractChildKeyOrder = (yamlText, parentKey) => {
+  if (!yamlText || !parentKey) return [];
+
+  const lines = yamlText.split(/\r?\n/);
+  const escapedParentKey = parentKey.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const parentPattern = new RegExp(`^${escapedParentKey}:\\s*$`);
+  let parentIndent = null;
+  let insideParent = false;
+  const keys = [];
+
+  for (const line of lines) {
+    if (!insideParent) {
+      if (parentPattern.test(line)) {
+        insideParent = true;
+        parentIndent = 0;
+      }
+      continue;
+    }
+
+    if (!line.trim() || line.trimStart().startsWith("#")) {
+      continue;
+    }
+
+    const indent = countIndent(line);
+    if (indent <= parentIndent) {
+      break;
+    }
+
+    const trimmed = line.trim();
+    if (indent === parentIndent + 2 && /^[A-Za-z0-9_-]+:\s*/.test(trimmed)) {
+      keys.push(trimmed.split(":")[0]);
+    }
+  }
+
+  return keys;
+};
+
+const applyCustomFont = (fontName) => {
+  const rootStyle = document.documentElement.style;
+
+  if (!fontName || typeof fontName !== "string" || !fontName.trim()) {
+    rootStyle.removeProperty("--font-body");
+    rootStyle.removeProperty("--font-mono");
+    return;
+  }
+
+  const familyName = JSON.stringify(fontName.trim());
+  rootStyle.setProperty(
+    "--font-body",
+    `${familyName}, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
+  );
+  rootStyle.setProperty(
+    "--font-mono",
+    `${familyName}, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace`
+  );
+};
+
 const createSectionElement = (key, title) => {
   const section = document.createElement("section");
   section.className = "mb-5";
@@ -203,24 +265,57 @@ const renderSimpleListItems = (items = [], container) => {
   container.appendChild(list);
 };
 
+const renderScholarLink = (item, container) => {
+  if (!item) return;
+
+  const linkWrap = document.createElement("div");
+  linkWrap.className = "mt-2 text-left";
+
+  const link = document.createElement("a");
+  link.className = "more-papers-link";
+  link.href = item.href || "#";
+  link.target = "_blank";
+  link.textContent = item.label || "";
+
+  linkWrap.appendChild(link);
+  container.appendChild(linkWrap);
+  container.appendChild(document.createElement("br"));
+};
+
+const getOrderedSectionEntries = (data = {}, orderedKeys = []) => {
+  const seen = new Set();
+  const entries = [];
+
+  orderedKeys.forEach((key) => {
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      entries.push([key, data[key]]);
+      seen.add(key);
+    }
+  });
+
+  Object.entries(data).forEach(([key, value]) => {
+    if (!seen.has(key)) {
+      entries.push([key, value]);
+    }
+  });
+
+  return entries;
+};
+
 const sectionRenderers = {
   publications: (data, section) => {
-    if (data.scholar_link) {
-      const linkWrap = document.createElement("div");
-      linkWrap.className = "mt-2 text-left";
+    const orderedEntries = getOrderedSectionEntries(
+      data,
+      (data && data.__fieldOrder) || []
+    );
 
-      const link = document.createElement("a");
-      link.className = "more-papers-link";
-      link.href = data.scholar_link.href || "#";
-      link.target = "_blank";
-      link.textContent = data.scholar_link.label || "";
-
-      linkWrap.appendChild(link);
-      section.appendChild(linkWrap);
-      section.appendChild(document.createElement("br"));
-    }
-
-    renderPublicationItems(data.papers || data.items || [], section);
+    orderedEntries.forEach(([key, value]) => {
+      if (key === "papers" || key === "items") {
+        renderPublicationItems(value || [], section);
+      } else if (key === "scholar_link") {
+        renderScholarLink(value, section);
+      }
+    });
   },
   conference_tutorials: (data, section) => {
     renderPublicationItems(data.items || [], section);
@@ -277,6 +372,7 @@ const applyConfig = (config) => {
     setMetaContent("#meta-author", config.site.meta_author);
   }
 
+  applyCustomFont(config["custom-font"]);
   renderHeader(config.header || {});
   renderSections(config);
 
@@ -292,6 +388,12 @@ const loadConfig = async () => {
 
     const yamlText = await response.text();
     const config = jsyaml.load(yamlText);
+    if (config && config.publications && typeof config.publications === "object") {
+      Object.defineProperty(config.publications, "__fieldOrder", {
+        value: extractChildKeyOrder(yamlText, "publications"),
+        enumerable: false,
+      });
+    }
     applyConfig(config);
   } catch (error) {
     console.error("Failed to load config.yaml", error);
