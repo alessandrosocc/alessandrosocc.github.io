@@ -5,6 +5,8 @@ site:
 
 custom-font: ~
 
+show_timeline_duration: true
+
 
 # here you specify the labels for the different sections of the website.
 sections:
@@ -131,3 +133,5 @@ education:
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
     date: "10/2021 - 07/2024"
+
+footer: "<a href=\"https://github.com/alessandrosocc/alessandrosocc.github.io\" target=\"_blank\" rel=\"noopener\">View this site on GitHub</a>"

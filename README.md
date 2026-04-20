@@ -196,6 +196,12 @@ experience:
     date: "08/2024 - Present"
 ```
 
+By default, the site shows a second line under each `date` with either the elapsed time (for `Present`) or the total duration. To disable it, set the following top-level flag in `assets/config.yaml`:
+
+```yaml
+show_timeline_duration: false
+```
+
 ### `education`
 
 This uses the same timeline-style layout as `experience`.
@@ -206,8 +212,10 @@ education:
     place: "University Name"
     logo: "images/logo.png"
     logo_alt: "University Name"
-    date: "2024 - Present"
+    date: "10/2024 - Present"
 ```
+
+The timeline duration label uses the `MM/YYYY - Present` or `MM/YYYY - MM/YYYY` format to compute elapsed time.
 
 ### `news`
 

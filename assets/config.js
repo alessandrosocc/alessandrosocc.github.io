@@ -169,7 +169,60 @@ const renderPublicationItems = (items = [], container) => {
   });
 };
 
-const renderTimelineItems = (items = [], container) => {
+const parseMonthYear = (value) => {
+  if (!value || typeof value !== "string") return null;
+  const [monthRaw, yearRaw] = value.trim().split("/");
+  const month = Number.parseInt(monthRaw, 10);
+  const year = Number.parseInt(yearRaw, 10);
+  if (!Number.isFinite(month) || !Number.isFinite(year)) return null;
+  if (month < 1 || month > 12) return null;
+  return { year, month };
+};
+
+const buildDurationLabel = (months) => {
+  if (!Number.isFinite(months) || months < 0) return "";
+  if (months === 0) return "Less than 1 mo";
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+  const parts = [];
+
+  if (years > 0) {
+    parts.push(`${years} ${years === 1 ? "yr" : "yrs"}`);
+  }
+  if (remainingMonths > 0) {
+    parts.push(`${remainingMonths} ${remainingMonths === 1 ? "mo" : "mos"}`);
+  }
+
+  return parts.join(" ");
+};
+
+const getElapsedLabel = (dateText) => {
+  if (!dateText || typeof dateText !== "string") return "";
+
+  const parts = dateText.split("-").map((part) => part.trim());
+  if (parts.length < 2) return "";
+
+  const start = parseMonthYear(parts[0]);
+  if (!start) return "";
+
+  const isPresent = /present/i.test(parts[1]);
+  const end = isPresent
+    ? { year: new Date().getFullYear(), month: new Date().getMonth() + 1 }
+    : parseMonthYear(parts[1]);
+
+  if (!end) return "";
+
+  const startIndex = start.year * 12 + start.month;
+  const endIndex = end.year * 12 + end.month;
+  const months = endIndex - startIndex;
+  const duration = buildDurationLabel(months);
+  if (!duration) return "";
+
+  return isPresent ? `Elapsed: ${duration}` : `Duration: ${duration}`;
+};
+
+const renderTimelineItems = (items = [], container, showDuration = true) => {
   items.forEach((item) => {
     const row = document.createElement("div");
     row.className = "experience-row";
@@ -207,7 +260,21 @@ const renderTimelineItems = (items = [], container) => {
 
     const date = document.createElement("div");
     date.className = "exp-date";
-    date.textContent = item.date || "";
+
+    const dateText = document.createElement("div");
+    dateText.className = "exp-date-text";
+    dateText.textContent = item.date || "";
+    date.appendChild(dateText);
+
+    if (showDuration) {
+      const durationText = getElapsedLabel(item.date || "");
+      if (durationText) {
+        const duration = document.createElement("div");
+        duration.className = "exp-duration";
+        duration.textContent = durationText;
+        date.appendChild(duration);
+      }
+    }
 
     row.appendChild(logo);
     row.appendChild(info);
@@ -302,6 +369,11 @@ const getOrderedSectionEntries = (data = {}, orderedKeys = []) => {
   return entries;
 };
 
+const isTimelineDurationEnabled = (config) => {
+  if (!config || typeof config !== "object") return true;
+  return config.show_timeline_duration !== false;
+};
+
 const sectionRenderers = {
   publications: (data, section) => {
     const orderedEntries = getOrderedSectionEntries(
@@ -323,11 +395,19 @@ const sectionRenderers = {
   program_committee: (data, section) => {
     renderSimpleListItems(Array.isArray(data) ? data : data.items || [], section);
   },
-  experience: (data, section) => {
-    renderTimelineItems(Array.isArray(data) ? data : data.items || [], section);
+  experience: (data, section, config) => {
+    renderTimelineItems(
+      Array.isArray(data) ? data : data.items || [],
+      section,
+      isTimelineDurationEnabled(config)
+    );
   },
-  education: (data, section) => {
-    renderTimelineItems(Array.isArray(data) ? data : data.items || [], section);
+  education: (data, section, config) => {
+    renderTimelineItems(
+      Array.isArray(data) ? data : data.items || [],
+      section,
+      isTimelineDurationEnabled(config)
+    );
   },
   news: (data, section) => {
     renderNewsItems(Array.isArray(data) ? data : data.items || [], section);
@@ -348,7 +428,7 @@ const renderSections = (config) => {
     const renderer = sectionRenderers[sectionKey];
 
     if (renderer) {
-      renderer(sectionData, section);
+      renderer(sectionData, section, config);
     } else {
       const fallback = document.createElement("pre");
       fallback.textContent = typeof sectionData === "string"
