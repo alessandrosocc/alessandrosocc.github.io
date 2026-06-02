@@ -110,7 +110,7 @@ conference_tutorials:
       venue: "UMAP 2026"
       links:
         - label: "[PDF]"
-          url: "https://dl.acm.org/doi/proceedings/10.1145/3774935"
+          url: "https://dl.acm.org/doi/10.1145/3774935.3802528"
         - label: "[Tutorial page]"
           url: "https://tail-unica.github.io/hopwise/umap2026/"
 
