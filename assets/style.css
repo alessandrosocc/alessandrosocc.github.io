@@ -167,6 +167,12 @@ h1, h2, h3 {
     margin-bottom: 2.5rem;
 }
 
+[data-section="program_committee"] b,
+[data-section="program_committee"] strong {
+    font-weight: 700;
+    color: #000;
+}
+
 .pub-title {
     font-size: 1.1rem;
     font-weight: 600;

@@ -320,7 +320,7 @@ const renderSimpleListItems = (items = [], container) => {
       if (item.html) {
         entry.innerHTML = item.html;
       } else if (item.text) {
-        entry.textContent = item.text;
+        entry.innerHTML = item.text;
       } else {
         entry.textContent = Object.values(item).filter(Boolean).join(" - ");
       }

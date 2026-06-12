@@ -56,7 +56,8 @@ header:
 #     html: "New website"
 program_committee:
   items:
-    - text: "ACM Conference on Recommender Systems (RecSys): 2026"
+    - text: "ACM Conference on Recommender Systems (<b>RecSys</b>): 2026"
+    - text: "ACM Conference on Knowledge and Information Management (<b>CIKM</b>): 2026"
 
 
 publications:
