@@ -392,6 +392,9 @@ const sectionRenderers = {
   conference_tutorials: (data, section) => {
     renderPublicationItems(data.items || [], section);
   },
+  reviewer: (data, section) => {
+    renderSimpleListItems(Array.isArray(data) ? data : data.items || [], section);
+  },
   program_committee: (data, section) => {
     renderSimpleListItems(Array.isArray(data) ? data : data.items || [], section);
   },

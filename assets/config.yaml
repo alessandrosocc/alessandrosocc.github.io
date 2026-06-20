@@ -12,7 +12,7 @@ show_timeline_duration: true
 sections:
   publications: "Publications"
   conference_tutorials: "Conference Tutorials"
-  program_committee: "Program Committee Membership"
+  reviewer: "Reviewer"
   experience: "Experience"
   education: "Education"
   #news_title: "News"
@@ -25,7 +25,7 @@ header:
   profile_image: "images/profile.png"
   profile_alt: "Alessandro Soccol"
   name_html: "Alessandro Soccol"
-  meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">Max Planck Institute for Intelligent Systems (IMPRS-IS), Stuttgart <br> <br></span> Research fellow, MSc Student <br><span class=\"sub-text\">University of Cagliari</span>"
+  meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">University of Stuttgart and Max Planck Institute for Intelligent Systems (IMPRS-IS) <br> 🇩🇪 <br></span> Research fellow, MSc Student <br><span class=\"sub-text\">University of Cagliari <br>🇮🇹</br></span>"
   #body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
   keywords:
     - "Recommender Systems"
@@ -54,7 +54,7 @@ header:
 # news:
 #   - date: "Feb 2026"
 #     html: "New website"
-program_committee:
+reviewer:
   items:
     - text: "ACM Conference on Recommender Systems (<b>RecSys</b>): 2026"
     - text: "ACM Conference on Knowledge and Information Management (<b>CIKM</b>): 2026"

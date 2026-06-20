@@ -167,6 +167,8 @@ h1, h2, h3 {
     margin-bottom: 2.5rem;
 }
 
+[data-section="reviewer"] b,
+[data-section="reviewer"] strong,
 [data-section="program_committee"] b,
 [data-section="program_committee"] strong {
     font-weight: 700;
