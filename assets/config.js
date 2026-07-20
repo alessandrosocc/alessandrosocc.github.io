@@ -1,4 +1,4 @@
-const CONFIG_PATH = "assets/config.yaml";
+const CONFIG_PATH = "assets/config.yaml?v=20260720-2";
 
 const setMetaContent = (selector, value) => {
   const el = document.querySelector(selector);
@@ -257,6 +257,13 @@ const renderTimelineItems = (items = [], container, showDuration = true) => {
 
     info.appendChild(role);
     info.appendChild(place);
+
+    if (item.description) {
+      const description = document.createElement("div");
+      description.className = "exp-description";
+      description.textContent = item.description;
+      info.appendChild(description);
+    }
 
     const date = document.createElement("div");
     date.className = "exp-date";

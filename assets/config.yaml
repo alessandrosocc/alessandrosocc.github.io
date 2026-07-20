@@ -25,7 +25,7 @@ header:
   profile_image: "images/profile.png"
   profile_alt: "Alessandro Soccol"
   name_html: "Alessandro Soccol"
-  meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">University of Stuttgart and Max Planck Institute for Intelligent Systems (IMPRS-IS) <br> 🇩🇪 <br></span> Research fellow, MSc Student <br><span class=\"sub-text\">University of Cagliari <br>🇮🇹</br></span>"
+  meta_html: "Incoming Doctoral Researcher<br><span class=\"sub-text\">University of Stuttgart and Max Planck Institute for Intelligent Systems (IMPRS-IS) </span>"
   #body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
   keywords:
     - "Recommender Systems"
@@ -107,29 +107,36 @@ conference_tutorials:
   items:
     - title: "How to Build Explainable Recommender Systems using Path Reasoning on Knowledge Graphs: A Tutorial with hopwise"
       url: "https://tail-unica.github.io/hopwise/umap2026/"
-      authors: " Ludovico Boratto, Gianni Fenu, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
+      authors: " Ludovico Boratto, Gianni Fenu, Francesca M. Malloci, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
       venue: "UMAP 2026"
       links:
         - label: "[PDF]"
           url: "https://dl.acm.org/doi/10.1145/3774935.3802528"
         - label: "[Tutorial page]"
           url: "https://tail-unica.github.io/hopwise/umap2026/"
+    - title: "Path-based Reasoning on Knowledge Graphs for Explainable Recommender Systems"
+      authors: "Ludovico Boratto, Gianni Fenu, Francesca M. Malloci, Mirko Marras, Giacomo Medda, and <strong>Alessandro Soccol</strong>"
+      venue: "CIKM 2026"
 
 experience:
-  - role: "Research Fellow"
+  - role: "Research Assistant"
     place: "University of Cagliari"
     #place_url: "https://xxxxxx"
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
-    date: "08/2024 - Present"
+    date: "08/2024 - 07/2026"
+    description: "Conducting research on recommender systems, knowledge graphs, and uncertainty quantification."
 
 education:
-  - role: "Master's Degree in Applied Artificial Intelligence"
+  - role: "Master's Degree Excellence Program in Applied Artificial Intelligence"
     place: "University of Cagliari"
     #place_url: "https://xxx"
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
-    date: "10/2024 - Present"
+    date: "10/2024 - 07/2026"
+    description: |
+      An honors program comprising 132 ECTS (rather than the standard 120),
+      with dedicated funding and a focus on advanced artificial intelligence topics.
 
   - role: "Bachelor's Degree in Applied Computer Science and Data Analytics"
     place: "University of Cagliari"
@@ -137,5 +144,6 @@ education:
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
     date: "10/2021 - 07/2024"
+    description: "A program focused on computer science and artificial intelligence."
 
 footer: "<a href=\"https://github.com/alessandrosocc/alessandrosocc.github.io\" target=\"_blank\" rel=\"noopener\">View this site on GitHub</a>"

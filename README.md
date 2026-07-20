@@ -194,6 +194,7 @@ experience:
     logo: "images/logo.png"
     logo_alt: "University Name"
     date: "08/2024 - Present"
+    description: "Brief description of the role and its main activities."
 ```
 
 By default, the site shows a second line under each `date` with either the elapsed time (for `Present`) or the total duration. To disable it, set the following top-level flag in `assets/config.yaml`:
@@ -213,6 +214,7 @@ education:
     logo: "images/logo.png"
     logo_alt: "University Name"
     date: "10/2024 - Present"
+    description: "Brief description of the programme, curriculum, or achievements."
 ```
 
 The timeline duration label uses the `MM/YYYY - Present` or `MM/YYYY - MM/YYYY` format to compute elapsed time.
