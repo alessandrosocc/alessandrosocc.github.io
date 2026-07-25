@@ -1,4 +1,4 @@
-const CONFIG_PATH = "assets/config.yaml?v=20260720-2";
+const CONFIG_PATH = "assets/config.yaml?v=20260725-8";
 
 const setMetaContent = (selector, value) => {
   const el = document.querySelector(selector);
@@ -219,10 +219,15 @@ const getElapsedLabel = (dateText) => {
   const duration = buildDurationLabel(months);
   if (!duration) return "";
 
-  return isPresent ? `Elapsed: ${duration}` : `Duration: ${duration}`;
+  return duration;
 };
 
-const renderTimelineItems = (items = [], container, showDuration = true) => {
+const renderTimelineItems = (
+  items = [],
+  container,
+  showDuration = true,
+  placeFirst = false
+) => {
   items.forEach((item) => {
     const row = document.createElement("div");
     row.className = "experience-row";
@@ -255,8 +260,39 @@ const renderTimelineItems = (items = [], container, showDuration = true) => {
       place.textContent = item.place || "";
     }
 
-    info.appendChild(role);
-    info.appendChild(place);
+    if (placeFirst) {
+      info.appendChild(place);
+      info.appendChild(role);
+    } else {
+      info.appendChild(role);
+      info.appendChild(place);
+    }
+
+    if (item.grade) {
+      const grade = document.createElement("div");
+      grade.className = "exp-grade";
+
+      const label = document.createElement("span");
+      label.className = "exp-grade-label";
+      label.textContent = "Grade: ";
+
+      grade.appendChild(label);
+      grade.appendChild(document.createTextNode(item.grade));
+      info.appendChild(grade);
+    }
+
+    if (item.thesis_title) {
+      const thesis = document.createElement("div");
+      thesis.className = "exp-thesis";
+
+      const label = document.createElement("span");
+      label.className = "exp-thesis-label";
+      label.textContent = "Thesis: ";
+
+      thesis.appendChild(label);
+      thesis.appendChild(document.createTextNode(item.thesis_title));
+      info.appendChild(thesis);
+    }
 
     if (item.description) {
       const description = document.createElement("div");
@@ -409,14 +445,16 @@ const sectionRenderers = {
     renderTimelineItems(
       Array.isArray(data) ? data : data.items || [],
       section,
-      isTimelineDurationEnabled(config)
+      isTimelineDurationEnabled(config),
+      true
     );
   },
   education: (data, section, config) => {
     renderTimelineItems(
       Array.isArray(data) ? data : data.items || [],
       section,
-      isTimelineDurationEnabled(config)
+      isTimelineDurationEnabled(config),
+      true
     );
   },
   news: (data, section) => {

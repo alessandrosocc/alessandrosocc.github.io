@@ -10,11 +10,11 @@ show_timeline_duration: true
 
 # here you specify the labels for the different sections of the website.
 sections:
+  experience: "Experience"
+  education: "Education"
   publications: "Publications"
   conference_tutorials: "Conference Tutorials"
   reviewer: "Reviewer"
-  experience: "Experience"
-  education: "Education"
   #news_title: "News"
 
 
@@ -29,15 +29,15 @@ header:
   #body_html: "I have co-authored four research papers, including two published in top-tier international conferences (ACM CIKM '25, ACM RecSys '24), and have mentored one Bachelor's student on his thesis project. I am also part of the Excellence Program, an honors track reserved for only two top-performing MSc students, and an Lead the Future (LTF) Mentee, a selective mentorship program for outstanding students with an acceptance rate of around 10% (over 2.5k applications). I've also been recognized by Forbes as one of the top 100 graduate students in Italy (over 300 applications)."
   keywords:
     - "Recommender Systems"
-    - "Conformal Prediction"
+    - "Conformal Risk Control"
     - "Knowledge Graphs"
     - "Natural Language Processing"
   links:
-    - label: "CV"
-      href: "pdf/2026_Alessandro_Soccol_Resume_FULL.pdf"
-      target: "_blank"
-    - label: "Email"
-      href: "mailto:alessandro.soccol@unica.it"
+    #- label: "CV"
+    #  href: "pdf/xxxx.pdf"
+    #  target: "_blank"
+    #- label: "Email"
+    #  href: "mailto:xxxx@xxx.it"
     - label: "Google Scholar"
       href: "https://scholar.google.com/citations?user=HVkFmM0AAAAJ&hl=it&authuser=1"
     #   target: "_blank"
@@ -119,27 +119,50 @@ conference_tutorials:
       venue: "CIKM 2026"
 
 experience:
+  - role: "Doctoral Researcher"
+    place: "Max Planck Institute for Intelligent Systems (IMPRS-IS)"
+    logo: "images/mpi.png"
+    logo_alt: "Max Planck Institute for Intelligent Systems"
+    date: "09/2026 - Present"
+
+  - role: "Doctoral Researcher"
+    place: "University of Stuttgart"
+    logo: "images/stuttgart.png"
+    logo_alt: "University of Stuttgart"
+    date: "09/2026 - Present"
+
   - role: "Research Assistant"
     place: "University of Cagliari"
     #place_url: "https://xxxxxx"
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
     date: "08/2024 - 07/2026"
-    description: "Conducting research on recommender systems, knowledge graphs, and uncertainty quantification."
+    description: "Published research at RecSys '24 (Bari, Italy; A-ranked), CIKM '25 (Seoul, South Korea; A-ranked), IIR '25 (Cagliari, Italy; unranked), and WAILS '25 (Cagliari, Italy; unranked). Conference tutorials at UMAP '26 (Gothenburg, Sweden; A-ranked) and CIKM '26 (Rome, Italy; A-ranked)."
 
 education:
-  - role: "Master's Degree Excellence Program in Applied Artificial Intelligence"
+  - role: "Master's Degree in Applied Artificial Intelligence"
     place: "University of Cagliari"
+    grade: "110/110, with honours"
+    thesis_title: "Statistically-Guaranteed Relevant Item Retrieval in Recommender Systems"
     #place_url: "https://xxx"
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
     date: "10/2024 - 07/2026"
+    description: "A Master's degree focused on advanced artificial intelligence topics."
+
+  - role: "Excellence Program"
+    place: "University of Cagliari"
+    logo: "images/univca.png"
+    logo_alt: "University of Cagliari"
+    date: "10/2024 - 07/2026"
     description: |
-      An honors program comprising 132 ECTS (rather than the standard 120),
+      An honours program comprising 132 ECTS (rather than the standard 120),
       with dedicated funding and a focus on advanced artificial intelligence topics.
 
   - role: "Bachelor's Degree in Applied Computer Science and Data Analytics"
     place: "University of Cagliari"
+    grade: "110/110, with honours"
+    # thesis_title: "Title of the thesis"
     #place_url: "https://xxxxx"
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"

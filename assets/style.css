@@ -241,6 +241,24 @@ h1, h2, h3 {
     color: var(--accent-hover);
 }
 
+.exp-thesis {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.exp-grade {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.exp-thesis-label,
+.exp-grade-label {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
 /* CTA Link for Scholar */
 .more-papers-link {
     font-family: var(--font-mono);
@@ -270,13 +288,18 @@ h1, h2, h3 {
 .exp-info { flex-grow: 1; }
 
 .exp-role {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95rem;
+}
+
+.exp-place {
+    font-weight: 600;
 }
 
 .exp-place a {
     color: var(--text-sub);
     border: none;
+    font-weight: inherit;
 }
 
 .exp-description {
@@ -291,10 +314,13 @@ h1, h2, h3 {
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: #999;
+    flex-shrink: 0;
+    text-align: right;
 }
 
 .exp-date-text {
     font-family: inherit;
+    white-space: nowrap;
 }
 
 .exp-duration {
@@ -302,6 +328,7 @@ h1, h2, h3 {
     font-size: 0.72rem;
     color: #777;
     margin-top: 2px;
+    text-align: right;
 }
 
 /* --- Affiliations Grid --- */

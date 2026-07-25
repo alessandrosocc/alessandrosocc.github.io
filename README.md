@@ -214,8 +214,12 @@ education:
     logo: "images/logo.png"
     logo_alt: "University Name"
     date: "10/2024 - Present"
+    grade: "110/110 cum laude"
+    thesis_title: "Title of the thesis"
     description: "Brief description of the programme, curriculum, or achievements."
 ```
+
+`grade` and `thesis_title` are optional. When set, they are shown below the institution as `Grade: …` and `Thesis: …`.
 
 The timeline duration label uses the `MM/YYYY - Present` or `MM/YYYY - MM/YYYY` format to compute elapsed time.
 
