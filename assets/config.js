@@ -1,4 +1,4 @@
-const CONFIG_PATH = "assets/config.yaml?v=20260725-8";
+const CONFIG_PATH = "assets/config.yaml?v=20260725-12";
 
 const setMetaContent = (selector, value) => {
   const el = document.querySelector(selector);
@@ -297,7 +297,7 @@ const renderTimelineItems = (
     if (item.description) {
       const description = document.createElement("div");
       description.className = "exp-description";
-      description.textContent = item.description;
+      description.innerHTML = item.description;
       info.appendChild(description);
     }
 

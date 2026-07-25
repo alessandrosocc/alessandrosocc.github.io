@@ -124,12 +124,14 @@ experience:
     logo: "images/mpi.png"
     logo_alt: "Max Planck Institute for Intelligent Systems"
     date: "09/2026 - Present"
+    description: 'Advised by <a href="https://scholar.google.com/citations?user=QvpcUn8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Steffen Staab</a>'
 
   - role: "Doctoral Researcher"
     place: "University of Stuttgart"
     logo: "images/stuttgart.png"
     logo_alt: "University of Stuttgart"
     date: "09/2026 - Present"
+    description: 'Advised by <a href="https://scholar.google.com/citations?user=QvpcUn8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Prof. Steffen Staab</a>'
 
   - role: "Research Assistant"
     place: "University of Cagliari"
