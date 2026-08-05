@@ -14,7 +14,7 @@ sections:
   education: "Education"
   publications: "Publications"
   conference_tutorials: "Conference Tutorials"
-  reviewer: "Reviewer"
+  reviewer: "Conference Reviewer"
   #news_title: "News"
 
 
@@ -150,7 +150,7 @@ education:
     logo: "images/univca.png"
     logo_alt: "University of Cagliari"
     date: "10/2024 - 07/2026"
-    description: "A Master's degree focused on advanced artificial intelligence topics."
+    description: "A Master's degree focused on artificial intelligence topics."
 
   - role: "Excellence Program"
     place: "University of Cagliari"
@@ -159,7 +159,7 @@ education:
     date: "10/2024 - 07/2026"
     description: |
       An honours program comprising 132 ECTS (rather than the standard 120),
-      with dedicated funding and a focus on advanced artificial intelligence topics.
+      with dedicated funding.
 
   - role: "Bachelor's Degree in Applied Computer Science and Data Analytics"
     place: "University of Cagliari"
