@@ -54,6 +54,25 @@ a:hover {
     border-left: 1px solid #ddd;
 }
 
+.publication-year {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #6c757d;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+.publication-year::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e5e5;
+}
+
 .menulink:hover {
     color: #111;
 }
